@@ -27,7 +27,9 @@ li, a{
 .nav-links a:hover{
   color: white;
 }
-
+#navigation a:hover{
+  color: white;
+}
 .navbar{
   width: 100%;
   color: white;
@@ -170,4 +172,3 @@ line-height: 24px;
 text-decoration: none;
 list-style: none; 
 }
-
