@@ -14,7 +14,11 @@
   font-style: italic;
 }
 
-.nav-links{
+a:hover{
+  color: white;
+}
+
+.navilinks{
   font-weight: 700;
   font-style: italic;
   font-size: 18px;
@@ -24,13 +28,13 @@ li, a{
   color: #9eb7c0;
   text-decoration: none;
 }
-.nav-links a:hover{
+.navilinks a:hover{
   color: white;
 }
 #navigation a:hover{
   color: white;
 }
-.navbar{
+.navigation{
   width: 100%;
   color: white;
   height: 50px;
@@ -38,7 +42,7 @@ li, a{
   margin-top: 20px;
 }
 
-.navbar .container{
+.navigation .container{
   max-width: 45%;
   margin: 0px auto;
   display: flex;
@@ -172,3 +176,4 @@ line-height: 24px;
 text-decoration: none;
 list-style: none; 
 }
+
