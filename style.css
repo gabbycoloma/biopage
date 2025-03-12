@@ -1,179 +1,300 @@
-*{
-  background-color: #2C3639;
-  font-family: 'Rubik', sans-serif;
-  color: white;
-  box-sizing: border-box;
+body {
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-}
-
-
-.logo{
-  font-weight: 700;
-  font-size: 30px;
-  font-style: italic;
-}
-
-a:hover{
+  background-color: #1e1e1e;
   color: white;
+  text-align: center;
+  /* Remove padding-top here */
 }
 
-.navilinks{
-  font-weight: 700;
-  font-style: italic;
-  font-size: 18px;
-}
-
-li, a{
-  color: #9eb7c0;
-  text-decoration: none;
-}
-.navilinks a:hover{
-  color: white;
-}
-#navigation a:hover{
-  color: white;
-}
-.navigation{
+/* Navbar */
+.navbar {
+  position: fixed;
   width: 100%;
-  color: white;
-  height: 50px;
-  margin-bottom: 50px;
-  margin-top: 20px;
+  top: 0;
+  left: 0;
+  background: #2a2a2a;
+  padding: 15px 50px;
+  z-index: 1000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.navigation .container{
-  max-width: 45%;
-  margin: 0px auto;
+.navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.picture{
-  max-width: 45%;
-  margin: 0px auto;
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Navbar Links */
+.nav-links {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
-}
-nav{
-  display: flex;
+  gap: 30px;
 }
 
-nav ul{
-  display: flex;
-  margin-right: 20px;
-}
-nav ul li{
-  list-style: none; 
-  margin: 0px 10px;
-}
-
-.pic{
-  width: 260px;
-  height: 260px;
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: color 0.3s ease, background 0.3s ease, border-radius 0.3s ease;
 }
 
-.div-info{
-  max-width: 45%;
-  margin: 0px auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: baseline;
-  margin-bottom: 20px;
+.nav-links a:hover {
+  color: #f39c12;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
 }
 
-.introduction{
-margin-bottom: 25px;
-font-style: normal;
-font-weight: 600;
-font-size: 18px;
-}
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+  }
 
-.welcome{
-  font-size: 18px;
-  font-weight: 300;
-  margin-bottom: 25px;
-}
+  .navbar-container {
+    flex-direction: column;
+    text-align: center;
+  }
 
-.learn{
-  font-size: 18px;
-  font-weight: 300;
-  margin-bottom: 25px;
-}
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
 
-hr{
-  max-width: 45%;
-  margin: 0px auto;
-  display: flex;
-  border: 2px solid #4F6166;
-  margin-bottom:45px;
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+  }
 }
-
-.info{
-  max-width: 45%;
-  margin: 0px auto;
+/* Hero Section */
+#hero {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
+  justify-content: center;
+  height: 100vh;
+  background: #222;
+  padding-top: 100px; /* Move padding to hero instead */
 }
-.info-links{
-  max-width: 45%;
-  margin: 0px auto;
+
+.hero-content h1 {
+  font-size: 2.5em;
+}
+
+.hero-content span {
+  color: #f39c12;
+}
+
+/* Profile Picture */
+.profile-pic {
+  width: 250px; /* Bigger size */
+  height: 250px; /* Ensures it's always a circle */
+  object-fit: cover; /* Prevents distortion */
+  border-radius: 50%; /* Ensures a perfect circle */
+  margin-bottom: 15px;
+  border: 5px solid #007bff; /* Blue border */
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+}
+
+h2 {
+  color: #f39c12;
+  font-size: 1.8em;
+}
+
+/* Experience Section */
+.experience-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.experience-box {
+  width: 45%;
+  padding: 20px;
+  background: #333;
+  border-radius: 10px;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+}
+
+/* Make company logos bigger */
+.company-logo {
+  width: 300px;
+  height: auto;
   margin-bottom: 10px;
 }
 
-.label{
-font-size: 24px;
-font-style: italic;
-font-weight: 700;
-line-height: 28px;
-letter-spacing: 0.02em;
-margin-bottom: 20px;
+/* Bullet Points for Experience */
+ul {
+  list-style: none;
+  padding: 0;
 }
 
-.content{
-color: white;
-font-size: 18px;
-font-weight: 300;
-line-height: 24px;
-}
-
-.social-menu{
-  max-width: 45%;
+ul li {
+  margin: 10px 0;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
-}
-.links{
-  width: 30px;
-  height: 30px;
+  gap: 10px;
 }
 
-.socialnav{
-  max-width: 45%;
-  margin: 0px auto;
+ul li::before {
+  content: "•";
+  color: #f39c12;
+  font-size: 1.5em;
+}
+
+/* Social Links */
+.social-links {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  margin-bottom: 100px;
+  gap: 20px;
 }
 
-.social-menu ul li{
-text-decoration: none;
-list-style: none; 
+.social-links a {
+  color: white;
+  transition: 0.3s;
+  font-size: 1.8em;
 }
 
+.social-links a:hover {
+  color: #f39c12;
+}
+
+.social-links img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s;
+}
+
+.social-links img:hover {
+  transform: scale(1.1);
+}
+
+/* Hobbies Section */
+.hobbies-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.hobby-box {
+  background: #333;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 15px rgba(243, 156, 18, 0.3);
+}
+
+/* Hobbies Icons */
+.hobby-box img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+/* Publications Section */
+#publications {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.publication-box {
+  background: #333;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.publication-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 15px rgba(243, 156, 18, 0.3);
+}
+
+.publication-box h3 {
+  font-size: 1.5rem;
+  color: #f39c12;
+}
+
+.publication-box p {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.publication-btn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #f39c12;
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.publication-btn:hover {
+  background: #ffa500;
+  transform: scale(1.05);
+}
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .experience-box {
+    width: 100%;
+  }
+  .hobby-box {
+    width: 100%;
+  }
+}
